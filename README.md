@@ -31,3 +31,14 @@ http://www.importnew.com/20344.html   使用 RMI + ZooKeeper 实现远程调用�
 http://www.importnew.com/
 
 #webservice
+http://yufenfei.iteye.com/blog/1685249
+
+#前端
+echarts   easyui
+
+#spring aop redis
+http://blog.csdn.net/zhanngle/article/details/41077423
+http://blog.csdn.net/u014695188/article/details/51499947
+
+#blog
+http://www.cnblogs.com/xdp-gacl/
