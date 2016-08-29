@@ -58,7 +58,7 @@ activiti5.18以下只支持Mybatis3.2.5，不支持3.3.0，否则会报SQL错误
 http://www.oschina.net/question/2524100_2141829
 http://www.zuidaima.com/share/2186311533595648.htm
 http://www.bubuko.com/infodetail-1006099.html
-
+http://www.bug315.com/article/128.htm
 
 #JAVA
 http://www.cnblogs.com/xdp-gacl/
