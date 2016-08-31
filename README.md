@@ -70,6 +70,8 @@ http://www.cnblogs.com/yjmyzz/p/4210554.html
 http://doc.okbase.net/Naploen8/archive/124775.html
 http://blog.csdn.net/qyl445/article/details/9837579
 http://www.cnblogs.com/surge/p/3582248.html
+http://blog.csdn.net/qiaqia609/article/details/11048463
+http://blog.csdn.net/qinpeng100423/article/details/6895978/
 
 #Mysql
 http://www.cnblogs.com/huangye-dream/archive/2013/05/30/3108298.html
