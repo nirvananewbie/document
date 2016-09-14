@@ -72,6 +72,11 @@ http://blog.csdn.net/qyl445/article/details/9837579
 http://www.cnblogs.com/surge/p/3582248.html
 http://blog.csdn.net/qiaqia609/article/details/11048463
 http://blog.csdn.net/qinpeng100423/article/details/6895978/
+http://www.bubuko.com/infodetail-959947.html
+http://www.jb51.net/article/77096.htm
+http://www.tuicool.com/articles/beUVjyB
+http://blog.csdn.net/u014695188/article/details/51488895
+
 
 #Mysql
 http://www.cnblogs.com/huangye-dream/archive/2013/05/30/3108298.html
