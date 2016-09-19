@@ -103,3 +103,10 @@ post方式提交中文数据乱码产生的原因和解决办法
 请求重定向和请求转发的区别
 　　一个web资源收到客户端请求后，通知服务器去调用另外一个web资源进行处理，称之为请求转发/307。
 　　一个web资源收到客户端请求后，通知浏览器去访问另外一个web资源进行处理，称之为请求重定向/302。
+
+
+
+
+JS Object拷贝问题，涉及浅拷贝与深拷贝的，可将Object转化成String再赋值，这样两个Object就不互相影响了。
+var queryDataStr = JSON.stringify(treeData);
+var queryData = JSON.parse(queryDataStr);
