@@ -77,6 +77,7 @@ http://www.jb51.net/article/77096.htm
 http://www.tuicool.com/articles/beUVjyB
 http://blog.csdn.net/u014695188/article/details/51488895
 http://outofmemory.cn/code-snippet/3025/spring-AOP-Around-Before-After-differentiate
+http://www.yiibai.com/spring_mvc/configuring-static-resource-and-resource-bundle-in-spring-mvc.html
 
 #Mysql
 http://www.cnblogs.com/huangye-dream/archive/2013/05/30/3108298.html
