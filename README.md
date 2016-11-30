@@ -84,8 +84,8 @@ http://www.cnblogs.com/huangye-dream/archive/2013/05/30/3108298.html
 http://blog.csdn.net/e421083458/article/details/38342051
 http://www.jb51.net/article/75451.htm
 
-
-
+#interllij 激活码
+http://blog.csdn.net/u012400327/article/details/50946103
 
 #JAVA中文乱码
 get方式提交中文数据乱码产生的原因和解决办法
