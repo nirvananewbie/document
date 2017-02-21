@@ -10,6 +10,7 @@ http://auguslee.iteye.com/blog/1292335    Java Callable用法
 
 http://www.iteye.com/topic/1002652    CountDownLatch用法
 
+http://www.cnblogs.com/cuiliang/p/3327039.html
 
 #单元测试
 http://blog.csdn.net/chjttony/article/details/14522771      使用Mock编写java单元测试
@@ -42,6 +43,10 @@ http://www.jeasyui.com/index.php
 #spring aop redis
 http://blog.csdn.net/zhanngle/article/details/41077423
 http://blog.csdn.net/u014695188/article/details/51499947
+
+#网页调用迅雷下载
+http://blog.csdn.net/mlianghua/article/details/6025983
+http://download.csdn.net/detail/gulu_gulu_jp/9450850
 
 #blog
 http://www.cnblogs.com/xdp-gacl/
@@ -87,6 +92,7 @@ http://www.jb51.net/article/75451.htm
 
 #interllij 激活码
 http://blog.csdn.net/u012400327/article/details/50946103
+http://blog.csdn.net/dc_726/article/details/42784275
 
 #JAVA中文乱码
 get方式提交中文数据乱码产生的原因和解决办法
