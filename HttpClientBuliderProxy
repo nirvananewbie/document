@@ -1,0 +1,94 @@
+参考网址：http://stackoverflow.com/questions/6962047/apache-httpclient-4-1-proxy-authentication
+http://www.programcreek.com/java-api-examples/index.php?api=org.apache.http.impl.client.ProxyAuthenticationStrategy
+
+示例代码：
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
+import org.apache.http.HttpHost;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.params.ConnRoutePNames;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.ProxyAuthenticationStrategy;
+import org.codehaus.jackson.map.ObjectMapper;
+
+import java.io.*;
+
+public class PictureGrabber {
+    private PictureGrabberMeta pictureGrabberMeta;
+    private String httpConnectionUrl = "";
+
+    public boolean methodA() {
+      ....
+        
+
+                HttpGet httpGet = new HttpGet(picUrlhttpConnect);
+                HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
+                //判断基本信息中的用户名密码是否为空
+                String user;
+                String passwd;
+                if(StringUtils.isNotBlank(user) && StringUtils.isNotBlank(passwd)){
+                    CredentialsProvider provider = new BasicCredentialsProvider();
+                    UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(user, passwd);
+                    provider.setCredentials(new AuthScope(host,Integer.parseInt(port)), credentials);
+                    httpClientBuilder.setDefaultCredentialsProvider(provider);
+                }
+
+                // 根据网络情况，决定是否使用代理
+                String agentHost;
+                String agentPort;
+                if(StringUtils.isNotBlank(agentHost) && StringUtils.isNotBlank(agentPort)){
+                    HttpHost proxy = new HttpHost(agentHost,Integer.parseInt(agentPort),"http");
+                    httpClientBuilder.setProxy(proxy);
+                    //代理用户名密码设置
+                    String agentUser;
+                    String agentPasswd;
+                    agentPasswd = agentPasswd == null ? "":agentPasswd;
+                    if(StringUtils.isNotBlank(agentUser)) {
+                        CredentialsProvider proxyProvider = new BasicCredentialsProvider();
+                        UsernamePasswordCredentials proxyCredentials = new UsernamePasswordCredentials(agentUser, agentPasswd);
+                        proxyProvider.setCredentials(new AuthScope(agentHost, Integer.parseInt(agentPort)), proxyCredentials);
+                        httpClientBuilder.useSystemProperties();
+                        httpClientBuilder.setDefaultCredentialsProvider(proxyProvider);
+                        httpClientBuilder.setProxyAuthenticationStrategy(new ProxyAuthenticationStrategy());
+                    }
+                }
+
+                //创建httpclient
+                CloseableHttpClient client = httpClientBuilder.build();
+
+                HttpResponse httpResponse = client.execute(httpGet);
+                if(httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
+                    InputStream inputStream = httpResponse.getEntity().getContent();
+                    // 将图片数据流做BASE64编码，传入到下一步骤代码样例
+                    StringBuilder pictureBuffer = new StringBuilder();
+                    pictureBuffer.append(Base64.encodeBase64String(IOUtils.toByteArray(inputStream)).replaceAll("\r|\n", ""));
+                    //将编码后的图片内容存入字段
+                    returnOriginalRow(r, pictureBuffer.toString());
+                    inputStream.close();
+                    client.close();
+                }else{
+                    returnOriginalRow(r, "");
+                }
+            
+        }
+    }
+
+    private void returnOriginalRow(Object[] r, String picture) throws KettlePluginException, KettleStepException {
+        String urlSaveField = pictureGrabberMeta.getUrlSaveField();
+        RowMetaInterface outputRowMeta = getInputRowMeta().clone();
+        ValueMetaInterface field = ValueMetaFactory.createValueMeta(urlSaveField, ValueMetaInterface.TYPE_STRING);
+        outputRowMeta.addValueMeta(field);
+        //将新的数据追加到原来的行数据的后面，成为新的输出行
+        Object[] values = new Object[]{picture};
+        r = RowDataUtil.addRowData(r, getInputRowMeta().size(), values);
+        putRow(outputRowMeta, r);
+    }
+}
