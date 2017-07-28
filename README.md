@@ -84,6 +84,8 @@ http://blog.csdn.net/u014695188/article/details/51488895
 http://outofmemory.cn/code-snippet/3025/spring-AOP-Around-Before-After-differentiate
 http://www.yiibai.com/spring_mvc/configuring-static-resource-and-resource-bundle-in-spring-mvc.html
 http://blog.csdn.net/qzshiyongjie123/article/details/19563249/
+http://www.cnblogs.com/sigm/p/6272384.html  (RingBuffer)
+
 
 #Mysql
 http://www.cnblogs.com/huangye-dream/archive/2013/05/30/3108298.html
